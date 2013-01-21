@@ -22,7 +22,7 @@ class Article extends WorkWithData {
 
 		$this -> WorkWithData ();
 		
-		$this -> table_articles = $cfg['DB']['Table']['prefix']."module_articles";
+		$this -> table_articles = $cfg['DB']['Table']['prefix'] ."module_articles";
 		
 		return true;
 	}

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-12-11 12:23:44
+<?php /* Smarty version 2.6.18, created on 2012-11-30 12:16:11
          compiled from C:/Users/sky-0x00/Documents/Visual+Studio+2008/Projects/p_web_company/templates/include/header.tpl.php */ ?>
 <html>
 <head>
@@ -11,9 +11,6 @@
 <title><?php echo $this->_tpl_vars['DOCUMENT_TITLE']; ?>
 </title>
 <link rel="stylesheet" type="text/css" href="/css/style.css" />
-
-<!--<link rel="canonical" href="http://wmas.msk.ru/category/name"/>-->
-
 <!--[if IE 6]>
 <script src="/js/bestpngfix.js"></script>
 <script type="text/javascript">

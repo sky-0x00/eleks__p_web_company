@@ -1,27 +1,27 @@
-<div class="left-column" style="width: 180px">
-			<h3 class="news">Архив статей</h3>
+        <div class="left-column articles">
+			<h2 class="news">Архив статей:</h2>
 			<ul class="archive">
 				{# foreach from=$months item=Item #}
 				{# if $Item.active && (!isset($month) || ($month != $Item.num)) #}
-				<li><a href="/articles/{# $year #}/{# $Item.num #}/">/{# $Item.name #}</a></li>
+				<li><a href="/articles/{# $year #}/{# $Item.num #}/">{# $Item.name #}</a></li>
 				{# elseif (isset($month) && ($month == $Item.num)) #}
-				<li class="active">/{# $Item.name #}</li>
+				<li class="active">{# $Item.name #}</li>
 				{# /if #}
 				{# /foreach #}
 			</ul>	
 		</div>
 		
-		<div class="basic" style="margin-left: 180px">
+		<div class="basic" style="margin-left: 180px;">
 			<div class="margin-left">
-				<div id="breadcrumbs"><a href="/">Главная</a> / <span>Статьи</span></div>
-				<h1>Статьи</h1>
+				<div id="breadcrumbs"><a href="/">Главная</a> / <a href="/articles/">Статьи</a>{# if (isset($year)) #} / {# $year #}{# /if #}</div>
+				<h1 style="text-indent: -18px;">Статьи</h1>
 				<div class="year-nav">
 					<ul>
 						{# foreach from=$years item=Item key=Key #}
 						{# if (isset($year) && ($year != $Item)) #}
-						<li><a href="/articles/{# $Item #}/">/{# $Item #}</a></li>
+						<li><a href="/articles/{# $Item #}/">{# $Item #}</a></li>
 						{# else #}
-						<li>/{# $Item #}</li>
+						<li>{# $Item #}</li>
 						{# /if #}
 						{# /foreach #}						
 					</ul>
@@ -32,10 +32,11 @@
 			<div class="news-page" {# if ($smarty.section.ext.index != 0) #} style="display: none;"{# /if #}>  
 				{# section name=int loop=$articles start=$smarty.section.ext.index step=1 max=$pager #}
 				<div class="news-block">
-					<div class="date">{# $articles[int].date|month #}</div>
-					<div class="news-text"><a href="/articles/{# $articles[int].year #}/{# $articles[int].month #}/{# $articles[int].id_article #}/">{# $articles[int].title #}</a></div>
-					<div class="news-text">{# $articles[int].annot #}</div>
-				</div> 
+                    <div class="news-text">
+					   <p class="date">{# $articles[int].date|month #}</p>
+                       <p class="indent" style="margin-top: 16px;"><a href="/articles/{# $articles[int].year #}/{# $articles[int].month #}/{# $articles[int].id_article #}/">{# $articles[int].title #}</a></p>
+                       <p class="indent">{# $articles[int].annot #}</p>
+                    </div>
 				{# /section #}
 			</div>
 			{# /section #}

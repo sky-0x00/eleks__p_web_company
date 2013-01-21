@@ -1,6 +1,6 @@
 {# include file='include/header.tpl.php' #}
 	
-	<div class="content">
+	<div class="content" style="margin-top: -20px; padding-bottom: 0px; border: 1px none gray;">
 		
 		<!--<div class="product-order">
 			<div class="cross"></div>			
@@ -16,8 +16,8 @@
 			</form>
 		</div>-->
 			
-		<div class="left-column">
-			<div class="box" style="margin-top: 56px">
+		<div class="left-column" style="position: absolute; width: auto; border: 1px none orange;">
+			<div class="box" style="margin-top: 10px; left: 0px;">
 				<div class="box-top png">&nbsp;</div>
 				<div class="box-center png">
 					<ul class="products">
@@ -28,10 +28,10 @@
 						<li><a href="/products/{# $Item.id #}/">{# $Item.name #}</a></li>
 						{# /if #}
 						{# /foreach #}
-					</ul>	
+					</ul>
 				</div>
 				<div class="box-bottom png">&nbsp;</div>
-			</div>	
+			</div>
 			<div class="price png">
 				<form method="post" action="">
 					<input type="hidden" name="getexcel" value="1" />
@@ -40,19 +40,19 @@
 			</div>
 		</div>
 		
-		<div class="product-photo">
+		<div class="product-photo" style="border: 1px none green;">
 			<div class="cross" title="Закрыть"></div>
 			<div class="title"></div>
 			<div class="big-image"></div>			
 			<div class="product-desc" style="clear: both; margin-left: 10px; margin-right: 10px;"></div>
 		</div>	
 		
-		<div class="basic">
+		<div class="basic" style="margin-top: 0px; margin-left: 370px; border: 1px none white;">
 			<div id="breadcrumbs"><a href="/">На главную</a> / <a href="/products/">Продукция</a> / <span>{# $cat_name #}</span></div>
 			<h1>Продукция</h1>
-			<h2 class="product">{# $cat_name #}</h2>
+			<h2 class="product" style="text-indent: 30px;">{# $cat_name #}</h2>
 			{# foreach from=$Items item=Item #}
-			<table class="product-details" cellspacing="0" cellpadding="0" border="0">
+			<table class="product-details">
 				<tr>
 					<td class="product-name" colspan="2">
 						<input type="hidden" name="id_item" value="{# $Item.id_item #}" />						
@@ -69,7 +69,7 @@
 				</tr>
 				{# /if #}
 				{# /foreach #}				
-			</table>	
+			</table>
 			{# /foreach #}	
 			
 			{# if $pages>1 #}
@@ -89,9 +89,6 @@
 		</div>	
 		
 	</div>	
-	
-	
-	
 	
 </div>
 	

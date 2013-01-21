@@ -1,6 +1,6 @@
 {# include file = "$root/admin/modules/cms/templates/top.tpl.php" #}
 
-<script language="javascript" src="/admin/modules/archive/js/function.js"></script>
+<script type="text/javascript" src="/admin/modules/archive/js/function.js"></script>
 
 <div id="outer">
 

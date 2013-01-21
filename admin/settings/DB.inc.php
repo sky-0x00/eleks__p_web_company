@@ -7,7 +7,7 @@ $cfg['DB']['Pass'] 	= "toor";
 $cfg['DB']['cls']  	= "SYS_DB";
 $cfg['DB']['debug'] = 0;
 
-$cfg['SETTINGS']['PAGER']['NEWS'] 	= 5;
+$cfg['SETTINGS']['PAGER']['NEWS'] 	= 50;         // для событий / новостей выводятся все новости за год (пейджер не работает), поэтому здесь д.б. большое значение
 $cfg['SETTINGS']['PAGER']['ARTICLES'] 	= 5;
 
 $_MONTHS[1]['name'] 	= "январь";

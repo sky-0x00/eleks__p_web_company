@@ -30,8 +30,8 @@ else {
 			
 			if ($count>0) {
 			
-				$rest 	= $count%$cfg['SETTINGS']['PAGER']['ARTICLES'];				
-				$pages 	= ($count-$rest)/$cfg['SETTINGS']['PAGER']['ARTICLES'];
+				$rest 	= $count%$cfg['SETTINGS']['PAGER']['NEWS'];				
+				$pages 	= ($count-$rest)/$cfg['SETTINGS']['PAGER']['NEWS'];
 				
 				if ($rest > 0)
 					$pages++;
@@ -45,7 +45,7 @@ else {
 			$tpl -> assign ( "months", 			$Article -> GetMonths($year) );
 			$tpl -> assign ( "year", 			$year );		
 			$tpl -> assign ( "articles", 		$articles );		
-			$tpl -> assign ( "pager", 			$cfg['SETTINGS']['PAGER']['ARTICLES'] );
+			$tpl -> assign ( "pager", 			$cfg['SETTINGS']['PAGER']['NEWS'] );
 			$tpl -> assign ( "module_articles", $tpl->fetch($cfg['PATH']['admin_modules_path']."news/templates/front-list.tpl.php") );
 			break;
 			
@@ -67,8 +67,8 @@ else {
 			
 			if ($count>0) {
 			
-				$rest 	= $count%$cfg['SETTINGS']['PAGER']['ARTICLES'];				
-				$pages 	= ($count-$rest)/$cfg['SETTINGS']['PAGER']['ARTICLES'];
+				$rest 	= $count%$cfg['SETTINGS']['PAGER']['NEWS'];				
+				$pages 	= ($count-$rest)/$cfg['SETTINGS']['PAGER']['NEWS'];
 				
 				if ($rest > 0)
 					$pages++;
@@ -82,7 +82,7 @@ else {
 			$tpl -> assign ( "months", 			$Article -> GetMonths($filter['year']) );
 			$tpl -> assign ( "year", 			$PARAMS[0] );
 			$tpl -> assign ( "articles", 		$articles );
-			$tpl -> assign ( "pager", 			$cfg['SETTINGS']['PAGER']['ARTICLES'] );
+			$tpl -> assign ( "pager", 			$cfg['SETTINGS']['PAGER']['NEWS'] );
 			$tpl -> assign ( "module_articles", $tpl->fetch($cfg['PATH']['admin_modules_path']."news/templates/front-list.tpl.php") );
 			break;
 			
@@ -105,8 +105,8 @@ else {
 			
 			if ($count>0) {
 			
-				$rest 	= $count%$cfg['SETTINGS']['PAGER']['ARTICLES'];				
-				$pages 	= ($count-$rest)/$cfg['SETTINGS']['PAGER']['ARTICLES'];
+				$rest 	= $count%$cfg['SETTINGS']['PAGER']['NEWS'];				
+				$pages 	= ($count-$rest)/$cfg['SETTINGS']['PAGER']['NEWS'];
 				
 				if ($rest > 0)
 					$pages++;
@@ -121,7 +121,7 @@ else {
 			$tpl -> assign ( "year", 			$PARAMS[0] );
 			$tpl -> assign ( "month", 			$PARAMS[1] );
 			$tpl -> assign ( "articles", 		$articles );
-			$tpl -> assign ( "pager", 			$cfg['SETTINGS']['PAGER']['ARTICLES'] );
+			$tpl -> assign ( "pager", 			$cfg['SETTINGS']['PAGER']['NEWS'] );
 			$tpl -> assign ( "module_articles", $tpl->fetch($cfg['PATH']['admin_modules_path']."news/templates/front-list.tpl.php") );
 			break;
 			

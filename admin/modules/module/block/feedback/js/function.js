@@ -30,7 +30,7 @@ $j(document).ready(function(){
 		return false;
 	});
 
-
+    // клик по кнопке отправить feedback
 	$j("#feedback-send").click(function () {
 		
 		if ($j(this).hasClass("blocked"))
@@ -44,13 +44,13 @@ $j(document).ready(function(){
 		var message = $j("#feedback-message").val();
 		
 		if (name=="") {
-			alert("Пожалуйста, укажите ваше имя.");
+			alert("Пожалуйста, укажите Ваше имя!");
 			$j("#feedback-send").removeClass("blocked");
 			return false;
 		}
 		
 		if (email=="") {
-			alert("Пожалуйста, укажите ваш email.");
+			alert("Пожалуйста, укажите Ваш e-mail адрес!");
 			$j("#feedback-send").removeClass("blocked");
 			return false;
 		}
@@ -58,13 +58,13 @@ $j(document).ready(function(){
 		email = trim(email); 
 		
 		if (!check_email(email)) {
-			alert("Введенный email неверный. Пожалуйста, попробуйте снова.");
+			alert("Введенный e-mail адрес некорректен! Пожалуйста, попробуйте снова!");
 			$j("#feedback-send").removeClass("blocked");
 			return false;
 		}
 		
 		if (message=="") {
-			alert("Пожалуйста, введите текст сообщения.");
+			alert("Пожалуйста, введите текст сообщения!");
 			$j("#feedback-send").removeClass("blocked");
 			return false;
 		}
@@ -82,7 +82,7 @@ $j(document).ready(function(){
 				
 				if (msg!=0) {
 						
-					alert("Спасибо, ваше сообщение успешно отправлено.");
+					alert("Спасибо. Ваше сообщение успешно отправлено!");
 						
 					setTimeout(function(){
 						$j("#feedback input:text").val("");
@@ -91,7 +91,7 @@ $j(document).ready(function(){
 					}, 500);						
 				}
 				else {
-					alert("Ошибка. Сообщение не может быть отправлено.");
+					alert("Ошибка! Сообщение не может быть отправлено!");
 					$j("#feedback-send").removeClass("blocked");
 				}
 			}

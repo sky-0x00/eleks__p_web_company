@@ -6,6 +6,8 @@ include_once ( $_SERVER['DOCUMENT_ROOT'] . "/admin/settings/Table.inc.php");
 
 include_once ( $cfg['PATH']['admin_modules_path']."articles/classes/Article.class.php" );
 
+//var_dump($PARAMS);  exit("params");
+
 $Article = new Article();
 
 switch (count($PARAMS)) {
@@ -33,7 +35,7 @@ switch (count($PARAMS)) {
 		else {
 			$pages = 0;
 		}
-		
+        
 		$tpl -> assign ( "pages",			$pages );
 		$tpl -> assign ( "years",			$years );
 		$tpl -> assign ( "months", 			$Article -> GetMonths($year) );
@@ -45,8 +47,7 @@ switch (count($PARAMS)) {
 		
 		
 	case 1:
-	
-		$filter['year'] = $PARAMS[0];
+        $filter['year'] = $PARAMS[0];
 		
 		$articles = $Article -> GetShortArticles($filter);		
 		
@@ -71,6 +72,8 @@ switch (count($PARAMS)) {
 			$pages = 0;
 		}
 		
+        //var_dump($articles[0]);  exit("articles");
+        
 		$tpl -> assign ( "pages",			$pages );
 		$tpl -> assign ( "years",			$Article -> GetYearList("DESC") );
 		$tpl -> assign ( "months", 			$Article -> GetMonths($filter['year']) );

@@ -1,10 +1,10 @@
-<?php /* Smarty version 2.6.18, created on 2012-11-30 09:38:45
+<?php /* Smarty version 2.6.18, created on 2013-01-21 08:32:14
          compiled from include/footer.tpl.php */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'date_format', 'include/footer.tpl.php', 7, false),array('modifier', 'truncate', 'include/footer.tpl.php', 9, false),)), $this); ?>
 <?php if ($this->_tpl_vars['DOCUMENT_SECTION'] == ""): ?>
-<div class="footer-index">
-	<div class="contents">
+<tr><td class="footer-index" style="border: 0px solid orange;">
+	<div class="contents" style="border: 0px solid yellow;">
 		<div class="caption">События<a href="/news/">Все события</a></div>
 		<?php $_from = $this->_tpl_vars['News']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
     foreach ($_from as $this->_tpl_vars['Item']):
@@ -31,7 +31,7 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'date_format
 			<div class="year">&copy;&nbsp;ООО&nbsp;&laquo;Группа компаний ЭЛЕКС&raquo;, 2012</div>
 		</div>	
 	</div>
-</div>
+</td>
 <?php else: ?>
     </div></td></tr>
         <tr><td class="footer">

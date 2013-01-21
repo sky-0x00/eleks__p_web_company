@@ -11,7 +11,7 @@ class FeedBack extends WorkWithData {
 		global $cfg;
 
 		$this->WorkWithData ();
-		$this->table = $cfg[DB][Table][prefix]."module_feedback";
+		$this->table = $cfg['DB']['Table']['prefix'] ."module_feedback";
 
 
 		return true;

@@ -267,7 +267,7 @@ $j(document).ready(function(){
  *	Просмотр отзывов
  *****************************************************************************************************************/
 
-	$j(".comments a").click(function(){		
+	$j("a img.comments").click(function(){		
 		
 		$j(".comments-form").show();
 		

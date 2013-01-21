@@ -1,8 +1,8 @@
 {# include file='include/header.tpl.php' #}
 	
-	<div class="content" style="height: auto">
+	<div class="content" style="height: auto; border: 0px solid gray; margin-top: -20px; padding-bottom: 0px;">
 		
-		<div class="comments-form png">
+		<div class="comments-form png" style="border: 0px solid orange;">
 			<div class="cross png" title="Закрыть"></div>
 			<div class="inside">
 				<h1 style="font-size: 18px; margin-bottom: 10px">Отзывы</h1>
@@ -27,43 +27,38 @@
 			</div>	
 		</div>
 			
-		<div class="left-column" style="width: 178px">
+		<div class="left-column" style="width: 128px; position: absolute; border: 0px solid yellow; margin-left: 100px;">
 			<h1 style="font-size: 18px">Отзывы</h1>
-			<img class="png" src="/images/comments.png" width="135" height="145" alt="" />
-			<span class="comments png"><a>Посмотреть отзывы</a></span>
+			<a><img class="comments png" src="/images/comments.png" width="135" height="145" alt="" title="Посмотреть отзывы" /></a>
+			<!--<span class="comments png"><a>Посмотреть отзывы</a></span>-->
 		</div>
 		
-		<div class="basic">
+		<div class="basic" style="border: 0px solid white; margin-top: 0px;">
 			<div id="breadcrumbs"><a href="/">На главную</a> / <span>О компании</span></div>			
 			<h1>О компании</h1>
 			<div class="company">
 				<p>{# $DOCUMENT_CONTENT #}</p>
 			</div>
+            
+            <h1 class="about">Сертификаты и допуски:</h1>
+    		<div class="certificates png">
+    			<div class="to-left png" title="Назад">&nbsp;</div>
+    			<div class="to-right png" title="Вперед">&nbsp;</div>
+    			<div class="wrapper">
+    				<ul>
+    					{# foreach from=$Sertificates item=Item #}
+    					<li>
+    						<a class="highslide" href="{# $Item.photo #}" onclick="return hs.expand(this, {  })">
+    							<img title="{# $Item.name #}" src="{# $Item.thumb #}" alt="" style="width: 79px; height: 106px;" />
+    						</a>	
+    					</li>
+    					{# /foreach #}
+    				</ul>	
+    			</div>
+    		</div>
+        
 		</div>	
-		<div class="advantage-tree png">
-			<div class="head png"><span class="png">Конкурентные преимущества</span></div>
-			<div class="branch png" style="top: 90px"><span class="png"><a href="/about/partners/">Партнерство с крупными организациями</a></span></div>
-			<div class="branch png" style="top: 180px; left: 142px"><span class="png"><a href="/services/">Комплексный подход к выполнению работ</a></span></div>
-			<div class="branch png" style="top: 104px; left: 442px"><span class="png"><a href="/services/">Многолетний опыт работы</a></span></div>
-			<div class="branch png" style="top: 160px; left: 600px"><span class="png" style="cursor: text">Высококвалифицированный персонал</span></div>
-			<div class="branch png" style="top: 250px; left: 415px"><span class="png"><a href="/products/">Собственные разработки в области автоматизации производства</a></span></div>
-		</div>	
-		<h1 style="font-size: 18px">Сертификаты и допуски</h1>
-		<div class="certificates png">
-			<div class="to-left png" title="Назад">&nbsp;</div>
-			<div class="to-right png" title="Вперед">&nbsp;</div>
-			<div class="wrapper">
-				<ul>
-					{# foreach from=$Sertificates item=Item #}
-					<li>
-						<a class="highslide" href="{# $Item.photo #}" onclick="return hs.expand(this, {  })">
-							<img title="{# $Item.name #}" src="{# $Item.thumb #}" alt="" style="width: 79px; height: 106px;" />
-						</a>	
-					</li>
-					{# /foreach #}
-				</ul>	
-			</div>
-		</div>		
+			
 	</div>	
 	
 	

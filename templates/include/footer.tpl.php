@@ -1,6 +1,6 @@
 {# if $DOCUMENT_SECTION=="" #}
-<div class="footer-index">
-	<div class="contents">
+<tr><td class="footer-index" style="border: 0px solid orange;">
+	<div class="contents" style="border: 0px solid yellow;">
 		<div class="caption">События<a href="/news/">Все события</a></div>
 		{# foreach from=$News item=Item #}
 		<div class="column">
@@ -19,7 +19,7 @@
 			<div class="year">&copy;&nbsp;ООО&nbsp;&laquo;Группа компаний ЭЛЕКС&raquo;, 2012</div>
 		</div>	
 	</div>
-</div>
+</td>
 {# else #}
     </div></td></tr>
         <tr><td class="footer">

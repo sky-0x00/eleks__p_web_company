@@ -6,30 +6,36 @@
 		{# /foreach #}
 	</div>
 	
-	<div class="content">
-		<div class="left-column">
-			<h1 style="font-size: 18px">Направления работы</h1>
+	<div class="content" style="border: 1px none gray; margin-top: 0px; padding-bottom: 0px;">
+		<div class="left-column services" style="margin-top: 30px; margin-left: 30px; position: absolute; width: auto; border: 0px solid orange;">
+			<h1 style="font-size: 18px">Направления работ:</h1>
 			<div class="circle png">
 				<a title="Автоматизированные системы" class="first{# if $DOCUMENT_SECTION == 'services' #}-active{# /if #} png" {# if $DOCUMENT_SECTION != 'services' #}href="/services/"{# /if #}>&nbsp;</a>
 				<a title="Электромонтажные работы" class="second{# if $DOCUMENT_SECTION == 'services/montage' #}-active{# /if #} png" {# if $DOCUMENT_SECTION != 'services/montage' #}href="/services/montage/"{# /if #}>&nbsp;</a>
 				<a title="Строительные работы" class="third{# if $DOCUMENT_SECTION == 'services/construction' #}-active{# /if #} png" {# if $DOCUMENT_SECTION != 'services/construction' #}href="/services/construction/"{# /if #}>&nbsp;</a>
-				<a title="Системы безопасности" class="fourth{# if $DOCUMENT_SECTION == 'services/safety' #}-active{# /if #} png" {# if $DOCUMENT_SECTION != 'services/safety' #}href="/services/safety/"{# /if #}>&nbsp;</a>
+				<a title="Системы видеонаблюдения" class="fourth{# if $DOCUMENT_SECTION == 'services/safety' #}-active{# /if #} png" {# if $DOCUMENT_SECTION != 'services/safety' #}href="/services/safety/"{# /if #}>&nbsp;</a>
 				<a title="Узлы теплоучета" class="fifth{# if $DOCUMENT_SECTION == 'services/node' #}-active{# /if #} png" {# if $DOCUMENT_SECTION != 'services/node' #}href="/services/node/"{# /if #}>&nbsp;</a>
 				{# if $DOCUMENT_SECTION == 'services' #}
-				<div class="ball png"></div>
+                <div class="ball png" style="left: 111px; top: 88px;"></div>
+				<div class="description" style="left: 110px; top: 114px;">{# $Objects[0].type #}</div>
 				{# elseif $DOCUMENT_SECTION == 'services/montage' #}
-				<div class="ball png" style="left: 85px; top: 120px;"></div>
+                <div class="ball png" style="left: 85px; top: 120px;"></div>
+				<div class="description png" style="left: 120px; top: 126px;">{# $Objects[0].type #}</div>
 				{# elseif $DOCUMENT_SECTION == 'services/construction' #}
-				<div class="ball png" style="left: 89px; top: 165px;"></div>
+                <div class="ball png" style="left: 89px; top: 165px;"></div>
+				<div class="description png" style="left: 120px; top: 132px;">{# $Objects[0].type #}</div>
 				{# elseif $DOCUMENT_SECTION == 'services/safety' #}
-				<div class="ball png" style="left: 125px; top: 194px;"></div>
-				{# /if #}
-				<div class="description">{# $Objects[0].type #}</div>
+                <div class="ball png" style="left: 125px; top: 194px;"></div>
+                <div class="description png" style="left: 120px; top: 126px;">{# $Objects[0].type #}</div>
+				{# elseif $DOCUMENT_SECTION == 'services/node' #}
+				<div class="description png" style="left: 114px; top: 126px;">{# $Objects[0].type #}</div>
+				<div class="ball png" style="left: 166px; top: 188px;"></div>
+                {# /if #}
+				
 			</div>	
 			
-			<h1 style="font-size: 18px">Продукция</h1>			
 			<div class="box">
-				<p>У нас вы можете заказать оборудование</p>
+				<h1 style="font-size: 18px; margin-bottom: 10px;">Наша продукция:</h1>
 				<div class="box-top png">&nbsp;</div>
 				<div class="box-center png">
 					<ul class="products">
@@ -40,17 +46,16 @@
 				</div>
 				<div class="box-bottom png">&nbsp;</div>
 			</div>		
-			<p>Представляемое оборудование поставляется известными мировыми лидерами</p>
 			<p>&nbsp;</p>
 			<!--<em>Контактный телефон</em>
 			<p class="phone">(495) 225-77-14</p>-->
 		</div>
 
 		
-		<div class="basic">
-			<div id="breadcrumbs"><a href="/">На главную</a> / <span>Услуги</span></div>
-			<h1>Услуги</h1>
-			<h2 class="product">{# $Objects[0].type #}</h2>
+		<div class="basic" style="border: 0px solid orange; margin-left: 350px; padding-bottom: 20px;">
+			<div id="breadcrumbs"><a href="/">На главную</a> / <a href="/services/">Услуги</a> / <span>{# $Objects[0].type #}</span></div>
+			<h1 style="margin-left: 0px;">Услуги</h1>
+			<h2 class="product" style="margin-left: 40px;">{# $Objects[0].type #}</h2>
 			<div class="object-photo">
 				{# foreach from=$Objects key=key item=Item #}
 				<img src="{# $Item.photo #}" width="331" height="219" {# if $key>0 #}style="display: none;" {# /if #}/>
@@ -75,7 +80,7 @@
 				</div>				
 			</div>
 			<div class="service-info">
-				{# $DOCUMENT_CONTENT #}
+				{# $DOCUMENT_CONTENT #}                
 			</div>	
 		</div>	
 		

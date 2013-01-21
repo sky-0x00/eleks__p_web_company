@@ -1,10 +1,11 @@
 {# include file='include/header.tpl.php' #}
 	
-	<div class="content">
+	<div class="content" style="margin-top: -22px;">
 
 		<div class="left-space">
 			<div id="breadcrumbs"><a href="/">На главную</a> / <a href="/about/">О компании</a> / <span>Партнеры</span></div>
-			<h1>Партнеры</h1>
+			<h1 style="text-indent: -18px;">Партнеры</h1>
+            
 		</div>	
 		<div class="partners png">
 			{# $iblock->getData("partners") #}
