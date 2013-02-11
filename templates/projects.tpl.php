@@ -51,7 +51,7 @@
 			<h1 style="margin-top: 20px;">Проекты</h1>
 			<h2 class="product">{# $projects[0].type #}</h2>
 			{# foreach from=$projects key=key item=Item #}
-			<div class="project" style="border: 1px none red; margin-left: {# if $key==0 #}100px; margin-top: 10px; {# elseif $key==1 #}80px;{# else #}0px; margin-bottom: 20px; {# /if #}">
+			<div class="project" style="margin-left: {# if $key==0 #}100px; margin-top: 0px; {# elseif $key==1 #}80px;{# else #}0px; margin-bottom: 20px; {# /if #}">
 				{# if $key!=1 #}
 				<div class="inform">
 					<a class="project-name" href="/projects/{# $Item.id_object #}/">{# $Item.name #}</a>

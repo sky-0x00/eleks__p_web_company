@@ -2472,12 +2472,15 @@ a.dotted {
 	float: left;
 	font-style: italic;
 	line-height: 1.5;
+    width: 780px;
+    border: 0px solid red; 
 }
 
 .project .image {
 	width: 275px;
 	height: 275px;
 	float: left;
+    border: 0px solid green;
 }
 
 .project .image img {
@@ -2486,11 +2489,11 @@ a.dotted {
 
 .project .inform {
 	float: left;
-	width: 360px;
+	width: 420px;
 	padding-top: 80px;
     line-height: 15px;
     font-size: 17px;
-    border: 0px solid green;
+    border: 0px solid yellow;
     padding-left: 20px;
     padding-right: 20px;
 }
